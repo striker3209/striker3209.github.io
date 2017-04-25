@@ -462,7 +462,7 @@ code {
 html,
 body {
   color: #555;
-  background-color: #fff;
+  background-color: #f5f5f5;
   font-size: 100%; /* add PX (or original value) as backup */
   font-size: 100%;
 }
@@ -719,6 +719,7 @@ footer {
   border-top: 1px solid #e1e1e1;
   font-size: 0.75rem;
   text-align: center;
+  background-color: #3c3c3c;
 }
 .pagination {
   display: block;
