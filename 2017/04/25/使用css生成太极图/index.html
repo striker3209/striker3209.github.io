@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="Pc.Nagisa">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="Hello World"/>
+  <meta property="og:title" content="使用css生成太极图"/>
   <meta property="og:description" content="" />
   <meta property="og:site_name" content="Pc.Nagisa@Levithan-FQ"/>
   <meta property="og:type" content="article" />
@@ -43,7 +43,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="page-title with-background-image">
-          <p class="title">Hello World</p>
+          <p class="title">使用css生成太极图</p>
           <p class="subtitle"></p>
         </div>
         <div class="site-menu with-background-image">
@@ -100,24 +100,24 @@
           
           <!-- Date -->
           <span class="date-time info">On
-            <span class="date">2017-04-24</span>
+            <span class="date">2017-04-25</span>
             <span class="time">14:03:02</span>
           </span>
           
         </div>
         <!-- Tags -->
         
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/css/">#css</a>
+
+
+          </div>
+        
         <!-- Post Main Content -->
         <div class="post-content">
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+          <p>使用CSS实现太极图绘制 代码如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">&lt;style&gt;   .taiji &#123;</div><div class="line">    border-left: 100px solid white;</div><div class="line">    border-right: 100px solid black;</div><div class="line">    box-shadow: 0 0 5px black;</div><div class="line">    height: 200px;</div><div class="line">    width: 0;</div><div class="line">    margin: 0 auto;</div><div class="line">    border-radius: 100px;</div><div class="line">    position: relative;</div><div class="line">&#125;</div><div class="line">.taiji:before &#123;</div><div class="line">    content: &quot;&quot;;</div><div class="line">    width: 100px;</div><div class="line">    height: 100px;</div><div class="line">    position: absolute;</div><div class="line">    top: 0;</div><div class="line">    left: -50px;</div><div class="line">    background-color: black;</div><div class="line">    border-radius: 50px;</div><div class="line">    box-shadow: 0 100px 0 white;</div><div class="line">&#125;</div><div class="line">.taiji:after &#123;</div><div class="line">    content: &quot;&quot;;</div><div class="line">    width: 25px;</div><div class="line">    height: 25px;</div><div class="line">    position: absolute;</div><div class="line">    top: 40px;</div><div class="line">    left: -20px;</div><div class="line">    background-color: white;</div><div class="line">    border-radius: 25px;</div><div class="line">    box-shadow: 0 100px 0 black;</div><div class="line">&#125;    &lt;/style&gt;</div><div class="line">&lt;div class=&quot;taiji&quot;&gt;&lt;/div&gt;</div></pre></td></tr></table></figure></p>
 
         </div>
       </div>
