@@ -101,7 +101,7 @@
           <!-- Date -->
           <span class="date-time info">On
             <span class="date">2017-05-09</span>
-            <span class="time">18:03:29</span>
+            <span class="time">18:05:52</span>
           </span>
           
         </div>
@@ -110,8 +110,51 @@
         <!-- Post Main Content -->
         <div class="post-content">
           <p>##在頁面内插入flash控件<br>    <object classid="clsid27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="373" height="166" align="center"><br>        <param name="movie" value="images/move.swf"><br>        <param name="quality" value="high"><br>        <param name="wmode" value="transparent"> <!--这里代码可使Flash背景透明 --><br>        <embed src="img/TPout.swf" width="373" height="166" align="center" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash"><br>        <br>    </object></p>
-<p>##js命令<br>JS控制flash的一些方法：<br>Play() —————————————- 播放动画<br>StopPlay()————————————停止动画<br>IsPlaying()———————————– 动画是否正在播放<br>GotoFrame(frame_number)—————- 跳转到某帧<br>TotalFrames()——————————- 获取动画总帧数<br>CurrentFrame()——————————回传当前动画所在帧数-1<br>Rewind()————————————-使动画返回第一帧<br>SetZoomRect(left,top,right,buttom)——-放大指定区域<br>Zoom(percent)——————————改变动画大小<br>Pan(x_position,y_position,unit)————使动画在x,y方向上平移<br>PercentLoaded()—————————-返回动画被载入的百分比<br>LoadMovie(level_number,path)———– 加载动画<br>TGotoFrame(movie_clip,frame_number)- movie_clip跳转到指定帧数<br>TGotoLabel(movie_clip,label_name)—— movie_clip跳转到指定标签<br>TCurrentFrame(movie_clip)————— 回传movie_clip当前帧-1<br>TCurrentLabel(movie_clip)—————–回传movie_clip当前标签<br>TPlay(movie_clip)—————————播放movie_clip<br>TStopPlay(movie_clip)———————-停止movie_clip的播放<br>GetVariable(variable_name)—————–获取变量<br>SetVariable(variable_name,value)———–变量赋值<br>TCallFrame(movie_clip,frame_number)—call指定帧上的action<br>TCallLabel(movie_clip,label)—————-call指定标签上的action<br>TGetProperty(movie_clip,property)——–获取movie_clip的指定属性<br>TSetProperty(movie_clip,property,number)-设置movie_clip的指定属性<br>其中TGetProperty　和　TSetProperty　的属性是使用数字0-18来获取的，下面是各数字代表的属性：<br>属性 作用 数字 使用方式<br>X Position X坐标 0 Get,Set<br>Y Position Y坐标 1 Get,Set<br>X Scale X方向缩放比率 2 Get,Set<br>Y Scale Y方向缩放比率 3 Get,Set<br>CurrentFrame movie_clip当前所在帧数 4 Get<br>TotalFrames movie_clip总帧数 5 Get<br>Alpha movie_clip的透明度 6 Get,Set<br>Visibility movie_clip是否可见 7 Get,Set<br>Width movie_clip的宽度 8 Get<br>Height movie_clip的高度 9 Get<br>Rotation movie_clip的旋转度 10 Get,Set<br>Target movie_clip的路径 11 Get<br>Framesloaded movie_clip已载入的帧数 12 Get<br>Name movie_clip的实体名字 13 Get,Set<br>DropTarget movie_clip的拖拽 14 Get<br>Url 包含movie_clip的动画的url 15 Get<br>HighQuality 设置画面质量为高质量 16 Get,Set<br>FocusRect 显示按钮边框 17 Get,Set<br>SoundBufTime 预设声音缓冲时间 18 Get,Set</p>
-<p>实例</p>
+<p>##js命令<br>JS控制flash的一些方法：<br><code>Play() ---------------------------------------- 播放动画 
+StopPlay()------------------------------------停止动画 
+IsPlaying()----------------------------------- 动画是否正在播放 
+GotoFrame(frame_number)---------------- 跳转到某帧 
+TotalFrames()------------------------------- 获取动画总帧数 
+CurrentFrame()------------------------------回传当前动画所在帧数-1 
+Rewind()-------------------------------------使动画返回第一帧 
+SetZoomRect(left,top,right,buttom)-------放大指定区域 
+Zoom(percent)------------------------------改变动画大小 
+Pan(x_position,y_position,unit)------------使动画在x,y方向上平移 
+PercentLoaded()----------------------------返回动画被载入的百分比 
+LoadMovie(level_number,path)----------- 加载动画 
+TGotoFrame(movie_clip,frame_number)- movie_clip跳转到指定帧数 
+TGotoLabel(movie_clip,label_name)------ movie_clip跳转到指定标签 
+TCurrentFrame(movie_clip)--------------- 回传movie_clip当前帧-1 
+TCurrentLabel(movie_clip)-----------------回传movie_clip当前标签 
+TPlay(movie_clip)---------------------------播放movie_clip 
+TStopPlay(movie_clip)----------------------停止movie_clip的播放 
+GetVariable(variable_name)-----------------获取变量 
+SetVariable(variable_name,value)-----------变量赋值 
+TCallFrame(movie_clip,frame_number)---call指定帧上的action 
+TCallLabel(movie_clip,label)----------------call指定标签上的action 
+TGetProperty(movie_clip,property)--------获取movie_clip的指定属性 
+TSetProperty(movie_clip,property,number)-设置movie_clip的指定属性
+其中TGetProperty　和　TSetProperty　的属性是使用数字0-18来获取的，下面是各数字代表的属性：
+属性 作用 数字 使用方式
+X Position X坐标 0 Get,Set 
+Y Position Y坐标 1 Get,Set 
+X Scale X方向缩放比率 2 Get,Set 
+Y Scale Y方向缩放比率 3 Get,Set 
+CurrentFrame movie_clip当前所在帧数 4 Get 
+TotalFrames movie_clip总帧数 5 Get 
+Alpha movie_clip的透明度 6 Get,Set 
+Visibility movie_clip是否可见 7 Get,Set 
+Width movie_clip的宽度 8 Get 
+Height movie_clip的高度 9 Get 
+Rotation movie_clip的旋转度 10 Get,Set 
+Target movie_clip的路径 11 Get 
+Framesloaded movie_clip已载入的帧数 12 Get 
+Name movie_clip的实体名字 13 Get,Set 
+DropTarget movie_clip的拖拽 14 Get 
+Url 包含movie_clip的动画的url 15 Get 
+HighQuality 设置画面质量为高质量 16 Get,Set 
+FocusRect 显示按钮边框 17 Get,Set 
+SoundBufTime 预设声音缓冲时间 18 Get,Set</code><br>实例</p>
 <ol>
 <li><p>获取页面中的swf<br>　　document.getElementById(‘swf’);</p>
 </li>
