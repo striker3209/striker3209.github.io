@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Pc.Nagisa">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="js控制flash"/>
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="Pc.Nagisa@Levithan-FQ"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://yoursite.comundefined"/>
+  
+    <link rel="alternate" href="/atom.xml" title="Pc.Nagisa@Levithan-FQ" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>Pc.Nagisa@Levithan-FQ</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <!-- Google Analytics -->
+  
+
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/bg-1.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">js控制flash</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://github.com/striker3209">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="mailto:striker3209@qq.com">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By Pc.Nagisa</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2017-05-09</span>
+            <span class="time">18:03:29</span>
+          </span>
+          
+        </div>
+        <!-- Tags -->
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <p>##在頁面内插入flash控件<br>    <object classid="clsid27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="373" height="166" align="center"><br>        <param name="movie" value="images/move.swf"><br>        <param name="quality" value="high"><br>        <param name="wmode" value="transparent"> <!--这里代码可使Flash背景透明 --><br>        <embed src="img/TPout.swf" width="373" height="166" align="center" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash"><br>        <br>    </object></p>
+<p>##js命令<br>JS控制flash的一些方法：<br>Play() —————————————- 播放动画<br>StopPlay()————————————停止动画<br>IsPlaying()———————————– 动画是否正在播放<br>GotoFrame(frame_number)—————- 跳转到某帧<br>TotalFrames()——————————- 获取动画总帧数<br>CurrentFrame()——————————回传当前动画所在帧数-1<br>Rewind()————————————-使动画返回第一帧<br>SetZoomRect(left,top,right,buttom)——-放大指定区域<br>Zoom(percent)——————————改变动画大小<br>Pan(x_position,y_position,unit)————使动画在x,y方向上平移<br>PercentLoaded()—————————-返回动画被载入的百分比<br>LoadMovie(level_number,path)———– 加载动画<br>TGotoFrame(movie_clip,frame_number)- movie_clip跳转到指定帧数<br>TGotoLabel(movie_clip,label_name)—— movie_clip跳转到指定标签<br>TCurrentFrame(movie_clip)————— 回传movie_clip当前帧-1<br>TCurrentLabel(movie_clip)—————–回传movie_clip当前标签<br>TPlay(movie_clip)—————————播放movie_clip<br>TStopPlay(movie_clip)———————-停止movie_clip的播放<br>GetVariable(variable_name)—————–获取变量<br>SetVariable(variable_name,value)———–变量赋值<br>TCallFrame(movie_clip,frame_number)—call指定帧上的action<br>TCallLabel(movie_clip,label)—————-call指定标签上的action<br>TGetProperty(movie_clip,property)——–获取movie_clip的指定属性<br>TSetProperty(movie_clip,property,number)-设置movie_clip的指定属性<br>其中TGetProperty　和　TSetProperty　的属性是使用数字0-18来获取的，下面是各数字代表的属性：<br>属性 作用 数字 使用方式<br>X Position X坐标 0 Get,Set<br>Y Position Y坐标 1 Get,Set<br>X Scale X方向缩放比率 2 Get,Set<br>Y Scale Y方向缩放比率 3 Get,Set<br>CurrentFrame movie_clip当前所在帧数 4 Get<br>TotalFrames movie_clip总帧数 5 Get<br>Alpha movie_clip的透明度 6 Get,Set<br>Visibility movie_clip是否可见 7 Get,Set<br>Width movie_clip的宽度 8 Get<br>Height movie_clip的高度 9 Get<br>Rotation movie_clip的旋转度 10 Get,Set<br>Target movie_clip的路径 11 Get<br>Framesloaded movie_clip已载入的帧数 12 Get<br>Name movie_clip的实体名字 13 Get,Set<br>DropTarget movie_clip的拖拽 14 Get<br>Url 包含movie_clip的动画的url 15 Get<br>HighQuality 设置画面质量为高质量 16 Get,Set<br>FocusRect 显示按钮边框 17 Get,Set<br>SoundBufTime 预设声音缓冲时间 18 Get,Set</p>
+<p>实例</p>
+<ol>
+<li><p>获取页面中的swf<br>　　document.getElementById(‘swf’);</p>
+</li>
+<li><p>播放flash中的影片剪辑元件（需知元件名）<br>　　document.getElementById(‘swf’).TPlay(‘mc’);</p>
+</li>
+</ol>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/striker3209">striker3209</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+
