@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Pc.Nagisa">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="http中各种状态码的含义"/>
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="Pc.Nagisa@Levithan-FQ"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://yoursite.comundefined"/>
+  
+    <link rel="alternate" href="/atom.xml" title="Pc.Nagisa@Levithan-FQ" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>Pc.Nagisa@Levithan-FQ</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <!-- Google Analytics -->
+  
+
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/bg-1.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">http中各种状态码的含义</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://github.com/striker3209">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="mailto:striker3209@qq.com">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By Pc.Nagisa</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2017-05-18</span>
+            <span class="time">19:53:41</span>
+          </span>
+          
+        </div>
+        <!-- Tags -->
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <p>###HTTP状态码及其含义<br>状 态 代 码 描    述<br>1xx-信息提示 这些状态代码表示临时的响应。客户端在收到常规响应之前，应准备接收一个或多个1xx响应 100 继续 101 切换协议<br>2xx 这类状态代码表明服务器成功地接受了客户端请求 200 确定。客户端请求已成功 201 已创建 202 已接受 203 非权威性信息 204 无内容 205 重置内容 206 部分内容<br>3xx 客户端浏览器必须采取更多操作来实现请求，例如，浏览器可能不得不请求服务器上的不同页面，或通过代理服务器重复该请求 301 对象已永久移走，即永久重定向 302 对象已临时移动 304 未修改 307 临时重定向<br>4xx 发生错误，客户端出现问题。例如，客户端请求不存在的页面，客户端未提供有效的身份验证信息 400 错误的请求<br>401 访问被拒绝。IIS定义了许多不同的401错误，它们指明更为具体的错误原因。这些具体的错误代码在浏览器中显示，但不在IIS日志中显示 401.1 登录失败<br>401.2 服务器配置导致登录失败<br>401.3 由于ACL对资源的限制而未获得授权 401.4 筛选器授权失败<br>401.5 ISAPI/CGI应用程序授权失败<br>401.7 访问被Web服务器上的URL授权策略拒绝。这个错误代码为IIS 6.0所专用 403 禁止访问，IIS定义了许多不同的403错误，它们指明更为具体的错误原因 403.1 执行访问被禁止 403.2<br>读访问被禁止 </p>
+<p>403.3 写访问被禁止 403.4 要求SSL 403.5 要求SSL128 403.6 IP地址被拒绝 403.7 要求客户端证书 403.8 站点访问被拒绝 403.9 用户数过多 403.10 配置无效 403.11 密码更改 403.12 拒绝访问映射表 403.13 客户端证书被吊销 403.14 拒绝目录列表 403.15 超出客户端访问许可 403.16 客户端证书不受信任或无效 403.17 客户端证书已过期或尚未生效<br>403.18 在当前的应用程序池中不能执行所请求的URL。这个错误代码为IIS 6.0所专用 403.19 不能为这个应用程序池中的客户端执行CGI。这个错误代码为IIS 6.0所专用 403.20 Passport登录失败。这个错误代码为IIS 6.0所专用 404 未找到<br>404.0 （无）–没有找到文件或目录<br>404.1 无法在所请求的端口上访问Web站点 404.2 Web服务扩展锁定策略阻止本请求 404.3 MIME映射策略阻止本请求<br>405 用来访问本页面的HTTP谓词不被允许（方法不被允许） 406 客户端浏览器不接受所请求页面的MIME类型 407 要求进行代理身份验证 412 前提条件失败 413 请求实体太大 414 请求URI太长 415 不支持的媒体类型 416 所请求的范围无法满足 417 执行失败 423<br>锁定的错误 </p>
+<p>附录I  HTTP状态代码 </p>
+<p>5xx 服务器错误 500 内部服务器错误<br>500.12 应用程序正忙于在Web服务器上重新启动 500.13 Web服务器太忙<br>500.15 不允许直接请求Global.asa<br>500.16 UNC授权凭据不正确。这个错误代码为IIS 6.0所专用 500.18 URL授权存储不能打开。这个错误代码为IIS 6.0所专用 500.100 内部ASP错误<br>501 页眉值指定了未实现的配置<br>502 Web服务器用作网关或代理服务器时收到了无效响应 502.1 CGI应用程序超时 502.2 CGI应用程序出错<br>503 服务不可用。这个错误代码为IIS6.0所专用 504 网关超时<br>505<br>HTTP版本不受支持</p>
+<!-- -->
+<!--403.3 写访问被禁止 403.4 要求SSL 403.5 要求SSL128 403.6 IP地址被拒绝 403.7 要求客户端证书 403.8 站点访问被拒绝 403.9 用户数过多 403.10 配置无效 403.11 密码更改 403.12 拒绝访问映射表 403.13 客户端证书被吊销 403.14 拒绝目录列表 403.15 超出客户端访问许可 403.16 客户端证书不受信任或无效 403.17 客户端证书已过期或尚未生效 -->
+<!--403.18 在当前的应用程序池中不能执行所请求的URL。这个错误代码为IIS 6.0所专用 403.19 不能为这个应用程序池中的客户端执行CGI。这个错误代码为IIS 6.0所专用 403.20 Passport登录失败。这个错误代码为IIS 6.0所专用 404 未找到 -->
+<!--404.0 （无）–没有找到文件或目录 -->
+<!--404.1 无法在所请求的端口上访问Web站点 404.2 Web服务扩展锁定策略阻止本请求 404.3 MIME映射策略阻止本请求 -->
+<!--405 用来访问本页面的HTTP谓词不被允许（方法不被允许） 406 客户端浏览器不接受所请求页面的MIME类型 407 要求进行代理身份验证 412 前提条件失败 413 请求实体太大 414 请求URI太长 415 不支持的媒体类型 416 所请求的范围无法满足 417 执行失败 423 -->
+<!--锁定的错误 -->
+<!--附录I  HTTP状态代码 -->
+<!-- -->
+<!--5xx 服务器错误 500 内部服务器错误 -->
+<!--500.12 应用程序正忙于在Web服务器上重新启动 500.13 Web服务器太忙 -->
+<!--500.15 不允许直接请求Global.asa -->
+<!--500.16 UNC授权凭据不正确。这个错误代码为IIS 6.0所专用 500.18 URL授权存储不能打开。这个错误代码为IIS 6.0所专用 500.100 内部ASP错误 -->
+<!--501 页眉值指定了未实现的配置 -->
+<!--502 Web服务器用作网关或代理服务器时收到了无效响应 502.1 CGI应用程序超时 502.2 CGI应用程序出错 -->
+<!--503 服务不可用。这个错误代码为IIS6.0所专用 504 网关超时 -->
+<!--505 -->
+<!--HTTP版本不受支持-->
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/striker3209">striker3209</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+

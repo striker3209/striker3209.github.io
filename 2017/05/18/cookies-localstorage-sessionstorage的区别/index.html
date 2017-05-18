@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="Pc.Nagisa">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="es6includes實現數組去重"/>
+  <meta property="og:title" content="cookies,localstorage,sessionstorage的区别"/>
   <meta property="og:description" content="" />
   <meta property="og:site_name" content="Pc.Nagisa@Levithan-FQ"/>
   <meta property="og:type" content="article" />
@@ -43,7 +43,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="page-title with-background-image">
-          <p class="title">es6includes實現數組去重</p>
+          <p class="title">cookies,localstorage,sessionstorage的区别</p>
           <p class="subtitle"></p>
         </div>
         <div class="site-menu with-background-image">
@@ -100,24 +100,21 @@
           
           <!-- Date -->
           <span class="date-time info">On
-            <span class="date">2017-05-11</span>
+            <span class="date">2017-05-18</span>
             <span class="time">19:53:41</span>
           </span>
           
         </div>
         <!-- Tags -->
         
-          <div class="post-tags text-muted">
-            Tags: 
-
-<a class="tag" href="/tags/es6-includes/">#es6 includes</a>
-
-
-          </div>
-        
         <!-- Post Main Content -->
         <div class="post-content">
-          <p>###es6 includes<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=&quot;en&quot;&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">    &lt;title&gt;Title&lt;/title&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">&lt;script&gt;</div><div class="line">    var arr = [12,3,2,3,5,6,4,2,5,6,7];</div><div class="line">    var newarr = [];</div><div class="line">    arr.forEach(function (v, i) &#123;</div><div class="line">        var str = newarr.join(&apos;,&apos;);</div><div class="line">        if(!str.includes(v.toString()))&#123;</div><div class="line">            newarr.push(v);</div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line">    console.log(newarr);</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
+          <p>###sessionStorage 、localStorage 和 cookie 之间的区别<br>共同点：都是保存在浏览器端，且同源的。</p>
+<p>区别：cookie数据始终在同源的http请求中携带（即使不需要），即cookie在浏览器和服务器间来回传递；cookie数据还有路径（path）的概念，可以限制cookie只属于某个路径下。存储大小限制也不同，cookie数据不能超过4k，同时因为每次http请求都会携带cookie，所以cookie只适合保存很小的数据，如会话标识。</p>
+<p>而sessionStorage和localStorage不会自动把数据发给服务器，仅在本地保存。sessionStorage和localStorage 虽然也有存储大小的限制，但比cookie大得多，可以达到5M或更大。</p>
+<p>数据有效期不同，sessionStorage：仅在当前浏览器窗口关闭前有效，自然也就不可能持久保持；localStorage：始终有效，窗口或浏览器关闭也一直保存，因此用作持久数据；cookie只在设置的cookie过期时间之前一直有效，即使窗口或浏览器关闭。</p>
+<p>作用域不同，sessionStorage不在不同的浏览器窗口中共享，即使是同一个页面；localStorage 在所有同源窗口中都是共享的；cookie也是在所有同源窗口中都是共享的。Web Storage 支持事件通知机制，可以将数据更新的通知发送给监听者。Web Storage 的 api 接口使用更方便。</p>
+<p>四大主流浏览器内核分别为Trident、Gecko、Presto和Webkit</p>
 
         </div>
       </div>
