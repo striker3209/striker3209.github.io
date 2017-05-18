@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Pc.Nagisa">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="解決跨域的8種方法"/>
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="Pc.Nagisa@Levithan-FQ"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://yoursite.comundefined"/>
+  
+    <link rel="alternate" href="/atom.xml" title="Pc.Nagisa@Levithan-FQ" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>Pc.Nagisa@Levithan-FQ</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <!-- Google Analytics -->
+  
+
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/bg-1.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">解決跨域的8種方法</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://github.com/striker3209">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="mailto:striker3209@qq.com">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By Pc.Nagisa</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2017-05-12</span>
+            <span class="time">19:30:46</span>
+          </span>
+          
+        </div>
+        <!-- Tags -->
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <p>###解決跨域問題的8種方法<br>1.同源策略如下：</p>
+<p>URL    说明    是否允许通信<br><a href="http://www.a.com/a.js" target="_blank" rel="external">http://www.a.com/a.js</a><br><a href="http://www.a.com/b.js" target="_blank" rel="external">http://www.a.com/b.js</a>    同一域名下    允许<br><a href="http://www.a.com/lab/a.js" target="_blank" rel="external">http://www.a.com/lab/a.js</a><br><a href="http://www.a.com/script/b.js" target="_blank" rel="external">http://www.a.com/script/b.js</a>    同一域名下不同文件夹    允许<br><a href="http://www.a.com:8000/a.js" target="_blank" rel="external">http://www.a.com:8000/a.js</a><br><a href="http://www.a.com/b.js" target="_blank" rel="external">http://www.a.com/b.js</a>    同一域名，不同端口    不允许<br><a href="http://www.a.com/a.js" target="_blank" rel="external">http://www.a.com/a.js</a><br><a href="https://www.a.com/b.js" target="_blank" rel="external">https://www.a.com/b.js</a>    同一域名，不同协议    不允许<br><a href="http://www.a.com/a.js" target="_blank" rel="external">http://www.a.com/a.js</a><br><a href="http://70.32.92.74/b.js" target="_blank" rel="external">http://70.32.92.74/b.js</a>    域名和域名对应ip    不允许<br><a href="http://www.a.com/a.js" target="_blank" rel="external">http://www.a.com/a.js</a><br><a href="http://script.a.com/b.js" target="_blank" rel="external">http://script.a.com/b.js</a>    主域相同，子域不同    不允许<br><a href="http://www.a.com/a.js" target="_blank" rel="external">http://www.a.com/a.js</a><br><a href="http://a.com/b.js" target="_blank" rel="external">http://a.com/b.js</a>    同一域名，不同二级域名（同上）    不允许（cookie这种情况下也不允许访问）<br><a href="http://www.cnblogs.com/a.js" target="_blank" rel="external">http://www.cnblogs.com/a.js</a><br><a href="http://www.a.com/b.js" target="_blank" rel="external">http://www.a.com/b.js</a>    不同域名    不允许<br>特别注意两点：<br>第一，如果是协议和端口造成的跨域问题“前台”是无能为力的，<br>第二：在跨域问题上，域仅仅是通过“URL的首部”来识别而不会去尝试判断相同的ip地址对应着两个域或两个域是否在同一个ip上。<br>“URL的首部”指window.location.protocol +window.location.host，也可以理解为“Domains, protocols and ports must match”。</p>
+<ol>
+<li>前端解决跨域问题</li>
+</ol>
+<p>1&gt; document.domain + iframe      (只有在主域相同的时候才能使用该方法)</p>
+<p>1) 在www.a.com/a.html中：</p>
+<p>复制代码<br>document.domain = ‘a.com’;<br>var ifr = document.createElement(‘iframe’);<br>ifr.src = ‘<a href="http://www.script.a.com/b.html" target="_blank" rel="external">http://www.script.a.com/b.html</a>‘;<br>ifr.display = none;<br>document.body.appendChild(ifr);<br>ifr.onload = function(){<br>    var doc = ifr.contentDocument || ifr.contentWindow.document;<br>    //在这里操作doc，也就是b.html<br>    ifr.onload = null;<br>};<br>复制代码<br>2) 在www.script.a.com/b.html中：</p>
+<p>document.domain = ‘a.com’;</p>
+<p>2&gt; 动态创建script</p>
+<p>这个没什么好说的，因为script标签不受同源策略的限制。</p>
+<p>复制代码<br>function loadScript(url, func) {<br>  var head = document.head || document.getElementByTagName(‘head’)[0];<br>  var script = document.createElement(‘script’);<br>  script.src = url;</p>
+<p>  script.onload = script.onreadystatechange = function(){<br>    if(!this.readyState || this.readyState==’loaded’ || this.readyState==’complete’){<br>      func();<br>      script.onload = script.onreadystatechange = null;<br>    }<br>  };</p>
+<p>  head.insertBefore(script, 0);<br>}<br>window.baidu = {<br>  sug: function(data){<br>    console.log(data);<br>  }<br>}<br>loadScript(‘<a href="http://suggestion.baidu.com/su?wd=w&#39;,function(){console.log(&#39;loaded&#39;)}" target="_blank" rel="external">http://suggestion.baidu.com/su?wd=w&#39;,function(){console.log(&#39;loaded&#39;)}</a>);<br>//我们请求的内容在哪里？<br>//我们可以在chorme调试面板的source中看到script引入的内容<br>复制代码</p>
+<p>3&gt; location.hash + iframe</p>
+<p>原理是利用location.hash来进行传值。</p>
+<p>假设域名a.com下的文件cs1.html要和cnblogs.com域名下的cs2.html传递信息。<br>1) cs1.html首先创建自动创建一个隐藏的iframe，iframe的src指向cnblogs.com域名下的cs2.html页面<br>2) cs2.html响应请求后再将通过修改cs1.html的hash值来传递数据<br>3) 同时在cs1.html上加一个定时器，隔一段时间来判断location.hash的值有没有变化，一旦有变化则获取获取hash值<br>注：由于两个页面不在同一个域下IE、Chrome不允许修改parent.location.hash的值，所以要借助于a.com域名下的一个代理iframe</p>
+<p>代码如下：<br>先是a.com下的文件cs1.html文件：</p>
+<p>复制代码<br>function startRequest(){<br>    var ifr = document.createElement(‘iframe’);<br>    ifr.style.display = ‘none’;<br>    ifr.src = ‘<a href="http://www.cnblogs.com/lab/cscript/cs2.html#paramdo" target="_blank" rel="external">http://www.cnblogs.com/lab/cscript/cs2.html#paramdo</a>‘;<br>    document.body.appendChild(ifr);<br>}</p>
+<p>function checkHash() {<br>    try {<br>        var data = location.hash ? location.hash.substring(1) : ‘’;<br>        if (console.log) {<br>            console.log(‘Now the data is ‘+data);<br>        }<br>    } catch(e) {};<br>}<br>setInterval(checkHash, 2000);<br>复制代码<br>cnblogs.com域名下的cs2.html:</p>
+<p>复制代码<br>//模拟一个简单的参数处理操作<br>switch(location.hash){<br>    case ‘#paramdo’:<br>        callBack();<br>        break;<br>    case ‘#paramset’:<br>        //do something……<br>        break;<br>}</p>
+<p>function callBack(){<br>    try {<br>        parent.location.hash = ‘somedata’;<br>    } catch (e) {<br>        // ie、chrome的安全机制无法修改parent.location.hash，<br>        // 所以要利用一个中间的cnblogs域下的代理iframe<br>        var ifrproxy = document.createElement(‘iframe’);<br>        ifrproxy.style.display = ‘none’;<br>        ifrproxy.src = ‘<a href="http://a.com/test/cscript/cs3.html#somedata" target="_blank" rel="external">http://a.com/test/cscript/cs3.html#somedata</a>‘;    // 注意该文件在”a.com”域下<br>        document.body.appendChild(ifrproxy);<br>    }<br>}<br>复制代码<br>a.com下的域名cs3.html</p>
+<p>//因为parent.parent和自身属于同一个域，所以可以改变其location.hash的值<br>parent.parent.location.hash = self.location.hash.substring(1);</p>
+<p>4&gt; window.name + iframe</p>
+<p>window.name 的美妙之处：name 值在不同的页面（甚至不同域名）加载后依旧存在，并且可以支持非常长的 name 值（2MB）。</p>
+<p>1) 创建a.com/cs1.html</p>
+<p>2) 创建a.com/proxy.html，并加入如下代码</p>
+<p>复制代码</p>
+<p><head><br>  <script><br>  function proxy(url, func){<br>    var isFirst = true,<br>        ifr = document.createElement(‘iframe’),<br>        loadFunc = function(){<br>          if(isFirst){<br>            ifr.contentWindow.location = ‘<a href="http://a.com/cs1.html">http://a.com/cs1.html</a>‘;<br>            isFirst = false;<br>          }else{<br>            func(ifr.contentWindow.name);<br>            ifr.contentWindow.close();<br>            document.body.removeChild(ifr);<br>            ifr.src = ‘’;<br>            ifr = null;<br>          }<br>        };</p>
+<pre><code>ifr.src = url;
+ifr.style.display = &apos;none&apos;;
+if(ifr.attachEvent) ifr.attachEvent(&apos;onload&apos;, loadFunc);
+else ifr.onload = loadFunc;
+
+document.body.appendChild(iframe);
+</code></pre><p>  }<br></script><br></head></p>
+<p><body><br>  <script><br>    proxy(‘<a href="http://www.baidu.com/">http://www.baidu.com/</a>‘, function(data){<br>      console.log(data);<br>    });<br>  </script><br></body><br>复制代码<br>3 在b.com/cs1.html中包含：</p>
+<script>
+    window.name = '要传送的内容';
+</script>
+
+
+<p>5&gt; postMessage（HTML5中的XMLHttpRequest Level 2中的API）</p>
+<p>1) a.com/index.html中的代码：</p>
+<p>复制代码</p>
+<p><iframe id="ifr" src="b.com/index.html"></iframe></p>
+<p><script type="text/javascript"><br>window.onload = function() {<br>    var ifr = document.getElementById(‘ifr’);<br>    var targetOrigin = ‘<a href="http://b.com">http://b.com</a>‘;  // 若写成’<a href="http://b.com/c/proxy.html&#39;效果一样">http://b.com/c/proxy.html&#39;效果一样</a><br>                                        // 若写成’<a href="http://c.com&#39;就不会执行postMessage了">http://c.com&#39;就不会执行postMessage了</a><br>    ifr.contentWindow.postMessage(‘I was there!’, targetOrigin);<br>};<br></script><br>复制代码<br>2) b.com/index.html中的代码：</p>
+<p>复制代码</p>
+<p><script type="text/javascript"><br>    window.addEventListener(‘message’, function(event){<br>        // 通过origin属性判断消息来源地址<br>        if (event.origin == ‘<a href="http://a.com">http://a.com</a>‘) {<br>            alert(event.data);    // 弹出”I was there!”<br>            alert(event.source);  // 对a.com、index.html中window对象的引用<br>                                  // 但由于同源策略，这里event.source不可以访问window对象<br>        }<br>    }, false);<br></script><br>复制代码<br>6&gt; CORS</p>
+<p>CORS背后的思想，就是使用自定义的HTTP头部让浏览器与服务器进行沟通，从而决定请求或响应是应该成功，还是应该失败。</p>
+<p>IE中对CORS的实现是xdr</p>
+<p>复制代码<br>var xdr = new XDomainRequest();<br>xdr.onload = function(){<br>    console.log(xdr.responseText);<br>}<br>xdr.open(‘get’, ‘<a href="http://www.baidu.com" target="_blank" rel="external">http://www.baidu.com</a>‘);<br>……<br>xdr.send(null);<br>复制代码<br>其它浏览器中的实现就在xhr中</p>
+<p>复制代码<br>var xhr =  new XMLHttpRequest();<br>xhr.onreadystatechange = function () {<br>    if(xhr.readyState == 4){<br>        if(xhr.status &gt;= 200 &amp;&amp; xhr.status &lt; 304 || xhr.status == 304){<br>            console.log(xhr.responseText);<br>        }<br>    }<br>}<br>xhr.open(‘get’, ‘<a href="http://www.baidu.com" target="_blank" rel="external">http://www.baidu.com</a>‘);<br>……<br>xhr.send(null);<br>复制代码<br>实现跨浏览器的CORS</p>
+<p>复制代码<br>function createCORS(method, url){<br>    var xhr = new XMLHttpRequest();<br>    if(‘withCredentials’ in xhr){<br>        xhr.open(method, url, true);<br>    }else if(typeof XDomainRequest != ‘undefined’){<br>        var xhr = new XDomainRequest();<br>        xhr.open(method, url);<br>    }else{<br>        xhr = null;<br>    }<br>    return xhr;<br>}<br>var request = createCORS(‘get’, ‘<a href="http://www.baidu.com" target="_blank" rel="external">http://www.baidu.com</a>‘);<br>if(request){<br>    request.onload = function(){<br>        ……<br>    };<br>    request.send();<br>}<br>复制代码<br>7&gt; JSONP</p>
+<p>JSONP包含两部分：回调函数和数据。</p>
+<p>回调函数是当响应到来时要放在当前页面被调用的函数。</p>
+<p>数据就是传入回调函数中的json数据，也就是回调函数的参数了。</p>
+<p>复制代码<br>function handleResponse(response){<br>    console.log(‘The responsed data is: ‘+response.data);<br>}<br>var script = document.createElement(‘script’);<br>script.src = ‘<a href="http://www.baidu.com/json/?callback=handleResponse" target="_blank" rel="external">http://www.baidu.com/json/?callback=handleResponse</a>‘;<br>document.body.insertBefore(script, document.body.firstChild);<br>/<em>handleResonse({“data”: “zhe”})</em>/<br>//原理如下：<br>//当我们通过script标签请求时<br>//后台就会根据相应的参数(json,handleResponse)<br>//来生成相应的json数据(handleResponse({“data”: “zhe”}))<br>//最后这个返回的json数据(代码)就会被放在当前js文件中被执行<br>//至此跨域通信完成<br>复制代码<br> jsonp虽然很简单，但是有如下缺点：</p>
+<p>1）安全问题(请求代码中可能存在安全隐患)</p>
+<p>2）要确定jsonp请求是否失败并不容易</p>
+<p>8&gt; web sockets</p>
+<p>web sockets是一种浏览器的API，它的目标是在一个单独的持久连接上提供全双工、双向通信。(同源策略对web sockets不适用)</p>
+<p>web sockets原理：在JS创建了web socket之后，会有一个HTTP请求发送到浏览器以发起连接。取得服务器响应后，建立的连接会使用HTTP升级从HTTP协议交换为web sockt协议。</p>
+<p>只有在支持web socket协议的服务器上才能正常工作。</p>
+<p>var socket = new WebSockt(‘ws://www.baidu.com’);//http-&gt;ws; https-&gt;wss<br>socket.send(‘hello WebSockt’);<br>socket.onmessage = function(event){<br>    var data = event.data;<br>}<br>分类: JS<br>好文要顶 关注我 收藏该文与我联系<br>7<br>0<br>上一篇：前端面试<br>下一篇：AJAX的前世今生与未来</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/striker3209">striker3209</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+
