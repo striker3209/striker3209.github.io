@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="Pc.Nagisa">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="Hello World"/>
+  <meta property="og:title" content="如何将url解析成对象格式"/>
   <meta property="og:description" content="" />
   <meta property="og:site_name" content="Pc.Nagisa@Levithan-FQ"/>
   <meta property="og:type" content="article" />
@@ -43,7 +43,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="page-title with-background-image">
-          <p class="title">Hello World</p>
+          <p class="title">如何将url解析成对象格式</p>
           <p class="subtitle"></p>
         </div>
         <div class="site-menu with-background-image">
@@ -100,7 +100,7 @@
           
           <!-- Date -->
           <span class="date-time info">On
-            <span class="date">2017-04-24</span>
+            <span class="date">2017-05-18</span>
             <span class="time">21:56:11</span>
           </span>
           
@@ -109,15 +109,8 @@
         
         <!-- Post Main Content -->
         <div class="post-content">
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+          <p>请编写一个JavaScript函数 parseQueryString，它的用途是把URL参数解析为一个对象</p>
+<p>如：var url = ”<a href="http://www.taobao.com/index.php?key0=0&amp;key1=1&amp;" target="_blank" rel="external">http://www.taobao.com/index.php?key0=0&amp;key1=1&amp;</a> key2=2”<br>var obj = new parseQueryString(url);<br>alert(obj.key0) // 输出0<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">复制代码</div><div class="line"> 1 &lt;!DOCTYPE HTML&gt;</div><div class="line"> 2 &lt;html lang=&quot;en&quot;&gt;</div><div class="line"> 3 &lt;head&gt;</div><div class="line"> 4 &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;</div><div class="line"> 5 &lt;title&gt;Web前端面试题 Js把URL中的参数解析为一个对象&lt;/title&gt;</div><div class="line"> 6 </div><div class="line"> 7 &lt;body&gt;</div><div class="line"> 8 &lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line"> 9 var url = &quot;http://www.taobao.com/index.php?key0=0&amp;key1=1&amp;key2=2&quot;;</div><div class="line">10</div><div class="line">11</div><div class="line">12 function parseQueryString(url)&#123;</div><div class="line">13     var str = url.split(&quot;?&quot;)[1],    //通过?得到一个数组,取?后面的参数</div><div class="line">14         items = str.split(&quot;&amp;&quot;);    //分割成数组</div><div class="line">15     var arr,name,value;</div><div class="line">16</div><div class="line">17     for(var i=0; i&lt;items.length; i++)&#123;</div><div class="line">18         arr = items[i].split(&quot;=&quot;);    //[&quot;key0&quot;, &quot;0&quot;]</div><div class="line">19         name = arr[0];</div><div class="line">20         value = arr[1];</div><div class="line">21         this[name] = value;</div><div class="line">22     &#125;</div><div class="line">23 &#125;</div><div class="line">24</div><div class="line">25 var obj = new parseQueryString(url);</div><div class="line">26 alert(obj.key2)</div><div class="line">27 &lt;/script&gt;</div><div class="line">28</div><div class="line">29 &lt;/body&gt;</div><div class="line">30 &lt;/html&gt;</div><div class="line">复制代码</div></pre></td></tr></table></figure></p>
 
         </div>
       </div>
